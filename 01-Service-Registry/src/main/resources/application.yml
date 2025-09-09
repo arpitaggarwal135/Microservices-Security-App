@@ -1,0 +1,8 @@
+# Configures server port
+server:
+  port: 8761
+
+# To prevent Eureka Server self-registration
+eureka:
+  client:
+    register-with-eureka: false

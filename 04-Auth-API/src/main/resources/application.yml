@@ -1,0 +1,24 @@
+#Configures server port
+server:
+  port: 9090
+
+# Configures application name
+spring:
+  application:
+    name: AUTH-API
+
+# Datasource properties
+  datasource:
+    url: jdbc:mysql://localhost:3306/sbms
+    username: ashokit
+    password: AshokIT@123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+# ORM properties
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true

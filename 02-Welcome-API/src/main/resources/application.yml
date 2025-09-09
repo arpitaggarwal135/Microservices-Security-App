@@ -1,0 +1,8 @@
+# Configures server port
+server:
+  port: 7070
+
+# Configures application name
+spring:
+  application:
+    name: WELCOME-API

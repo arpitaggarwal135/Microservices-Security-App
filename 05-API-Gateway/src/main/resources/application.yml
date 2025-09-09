@@ -1,0 +1,31 @@
+# Configures server port
+server:
+  port: 1111
+
+# Configures application name
+spring:
+  application:
+    name: API-GATEWAY
+  cloud:
+    gateway:
+      routes:
+      - id: welcome-api
+        uri: lb://WELCOME-API
+        predicates:
+        - Path=/welcome
+        filters:
+        - AuthenticationFilter        
+      - id: greet-api
+        uri: lb://GREET-API
+        predicates:
+        - Path=/greet
+        filters:
+        - AuthenticationFilter      
+      - id: auth-api
+        uri: lb://AUTH-API
+        predicates:
+        - Path=/auth/**
+
+# Configures application type
+  main:
+    web-application-type: reactive

@@ -1,0 +1,8 @@
+# Configures server port
+server:
+  port: 8080
+
+# Configures application name
+spring:
+  application:
+    name: GREET-API
