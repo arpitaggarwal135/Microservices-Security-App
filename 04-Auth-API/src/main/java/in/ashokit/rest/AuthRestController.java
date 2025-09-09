@@ -23,7 +23,7 @@ public class AuthRestController {
 		return new ResponseEntity<>(msg, HttpStatus.CREATED);
 	}
 	
-	@PostMapping("/token")
+	@PostMapping("/login")
 	public ResponseEntity<String> generateToken(@RequestBody Customer customer) {
 		ResponseEntity<String> response = new ResponseEntity<>("Invalid Credentials !!", HttpStatus.BAD_REQUEST);
 		
